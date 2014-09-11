@@ -11,7 +11,7 @@
   "dependencies": {
     "noflo": "^0.5.9",
     "noflo-core": "^0.1.11",
-    "noflo-nodejs": "0.0.5",
+    "noflo-nodejs": "^0.0.6",
     "noflo-objects": "^0.1.12",
     "noflo-packets": "^0.1.5"
   }
