@@ -1,3 +1,8 @@
-run(core/RunInterval) OUT -> IN rep(packets/SplitPacket) OUT -> IN data(core/Kick) OUT -> IN out(core/Output)
+data(core/Kick) OUT -> IN out(core/Output)
 'Hi!' -> DATA data
-'2000' -> INTERVAL run
+'true' -> IN data
+
+motion(ListenGpio) OUT -> IN s(packets/SplitPacket) OUT -> IN filename(core/Kick) OUT -> IN camera(GrabWebcam)
+
+'latest.jpeg' -> DATA filename
+'11' -> PIN motion
