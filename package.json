@@ -13,6 +13,13 @@
     "noflo-core": "^0.1.11",
     "noflo-nodejs": "^0.0.6",
     "noflo-objects": "^0.1.12",
-    "noflo-packets": "^0.1.5"
+    "noflo-packets": "^0.1.5",
+    "rpi-gpio": "^0.5.0"
+  },
+  "noflo": {
+    "components": {
+       "ListenGpio": "components/ListenGpio.coffee",
+       "GrabWebcam": "components/GrabWebcam.coffee"
+    }
   }
 }
