@@ -1,0 +1,62 @@
+{
+  "processes": {
+    "run": {
+      "component": "core/RunInterval"
+    },
+    "rep": {
+      "component": "packets/SplitPacket"
+    },
+    "data": {
+      "component": "core/Kick"
+    },
+    "out": {
+      "component": "core/Output"
+    }
+  },
+  "connections": [
+    {
+      "src": {
+        "process": "run",
+        "port": "out"
+      },
+      "tgt": {
+        "process": "rep",
+        "port": "in"
+      }
+    },
+    {
+      "src": {
+        "process": "rep",
+        "port": "out"
+      },
+      "tgt": {
+        "process": "data",
+        "port": "in"
+      }
+    },
+    {
+      "src": {
+        "process": "data",
+        "port": "out"
+      },
+      "tgt": {
+        "process": "out",
+        "port": "in"
+      }
+    },
+    {
+      "data": "Hi!",
+      "tgt": {
+        "process": "data",
+        "port": "data"
+      }
+    },
+    {
+      "data": "2000",
+      "tgt": {
+        "process": "run",
+        "port": "interval"
+      }
+    }
+  ]
+}

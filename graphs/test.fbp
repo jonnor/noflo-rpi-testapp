@@ -1,0 +1,3 @@
+run(core/RunInterval) OUT -> IN rep(packets/SplitPacket) OUT -> IN data(core/Kick) OUT -> IN out(core/Output)
+'Hi!' -> DATA data
+'2000' -> INTERVAL run
